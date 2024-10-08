@@ -1,5 +1,111 @@
-template-repository (1.0-1) unstable; urgency=medium
+libubootenv (0.3.5-0.1) unstable; urgency=medium
 
-  * Initial release
+  * Non-maintainer upload
+  * New upstream version 0.3.5 (Closes: #1020862)
+  * d/control: Add libyaml-dev as new build dependency
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Gylstorff Quirin <quirin.gylstorff@siemens.com>  Tue, 12 Dec 2023 11:34:01 +0100
+
+libubootenv (0.3.2-1) unstable; urgency=medium
+
+  [ Bastian Germann ]
+  * Add manpages based on u-boot-tools (Closes: #986361)
+
+  [ Nobuhiro Iwamatsu ]
+  * d/control:
+    - Add Rules-Requires-Root: no
+    - Use debhelper-compat instead of debhelper, and update to 13.
+    - Bump Standards-Version to 4.6.0.1 (no change).
+  * Remove d/compat.
+  * Add d/upstream/metadata.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 14 Dec 2021 08:38:44 +0900
+
+libubootenv (0.3.2-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version 0.3.2 (Closes: #981642)
+  * Update symbols for correct SOVERSION
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 04 May 2021 09:52:08 +0200
+
+libubootenv (0.3-3) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * debian/rules: Remove unused variables
+  * debian/rules: Remove CMAKE_VERBOSE_MAKEFILE, set by dh as needed
+  * debian/rules: Drop non-existent BUILD_DOCS option
+  * Define NDEBUG to avoid debug prints (Closes: #985948)
+  * Add autopkgtest smoketest of fw_{print,set}env
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sun, 11 Apr 2021 08:32:03 +0900
+
+libubootenv (0.3-2) unstable; urgency=medium
+
+  [ Dave Jones ]
+  * Added symbols for libubootenv0.1 (Closes: #969216)
+
+  [ Bastian Germann ]
+  * Compile with NDEBUG set (Closes: #985948)
+  * Let libubootenv-dev depend on zlib1g-dev (Closes: #969026)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 06 Apr 2021 09:45:58 +0900
+
+libubootenv (0.3-1) unstable; urgency=medium
+
+  * Update to 0.3.
+  * Remove d/patches.
+    All patches are no longer needed.
+  * Update d/libubootenv-dev.install.
+    Add pkgconfig file.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 24 Aug 2020 13:56:40 +0900
+
+libubootenv (0.2-2) unstable; urgency=medium
+
+  * update d/watch
+    Use uscan's git mode, verifying OpenPGP. (Closes: #968282)
+    Thanks to Bastian Germann <bage@linutronix.de>.
+  * Fix build with dpkg-buildpackage on stable. (Closes: #967487)
+    Thanks to Gylstorff Quirin <quirin.gylstorff@siemens.com>.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 24 Aug 2020 13:42:43 +0900
+
+libubootenv (0.2-1) unstable; urgency=medium
+
+  * Update to 0.2.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 31 Jan 2020 23:34:51 +0900
+
+libubootenv (0.1-5) unstable; urgency=medium
+
+  * Add Versioned Conflicts with u-boot-tools, as newer
+    versions of u-boot-tools actually recommend libubootenv-tools.
+    (Closes: #944644)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 02 Dec 2019 10:57:30 +0900
+
+libubootenv (0.1-4) unstable; urgency=medium
+
+  * Fix build reproducible. (Closes: #939547)
+    Thanks, Chris Lamb.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 31 Oct 2019 17:25:10 +0900
+
+libubootenv (0.1-3) unstable; urgency=medium
+
+  * Use source upload.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 31 Oct 2019 16:56:35 +0900
+
+libubootenv (0.1-2) unstable; urgency=medium
+
+  * Add u-boot-tools Conflicts of libubootenv-tool (Closes: #939598)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 16 Sep 2019 06:30:21 +0900
+
+libubootenv (0.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #929047)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 16 Apr 2019 09:48:44 +0900
